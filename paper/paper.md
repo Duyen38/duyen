@@ -78,27 +78,22 @@
 где r_i  - точки контрольного многоугольника, а <img src = "https://render.githubusercontent.com/render/math?math=N_{i,k}%20(u)"> называются весовыми функциями B-сплайна B-сплайнов. Контрольный многоугольник имеет n + 1 контрольную точку. <img src = "https://render.githubusercontent.com/render/math?math=N_{i,k}%20(u)"> определяются на основе последовательности узлов:
 
 <img src = "https://render.githubusercontent.com/render/math?math=U_{knot}=\{u_0,%20u_1,%20\dots,%20u_m\}">
-с рекурсивной формулой:
 
+с рекурсивной формулой:
 <img src = "https://render.githubusercontent.com/render/math?math=N_{i,k}(u)%20=%20\{%20{1,%20u_i%20\leq%20u%20\leq%20u_{i-1}}%20|%200,%20%20otherwise\}">
 
 <img src = "https://render.githubusercontent.com/render/math?math=N_{i,k}(u)%20=%20\frac{(u-u_i)N_{i,k-1}(u)}{u_{i%2Bk}-u_i}%20+%20%20%2B\frac{(u_{i%2Bk%2B1}-u)N_{i%2B1,k-1}%20(u)}{u_{i%2Bk%2B1}-u_{i%2B1}}">
 
 Когда знаменатель равен нулю, предполагается, что дробь имеет нулевое значение.
-
 B-сплайн-функции порядка k определяются уравнением:
-
 <img src = "https://render.githubusercontent.com/render/math?math=B_k%20(x)=%20\frac{1}{k}%20\sum_{i=0}^{k%2B1}%20(-1)^k%20\binom{k%2B1}{i}(x-i%2B%20\frac{k%2B1}{2})^k%20H(x-i%2B%20\frac{k%2B1}{2})">
 где k - степень каждого кусочного полинома, а H (x) - ступенчатая функция Хевисайда.
 
 Тогда B-сплайн-функции любого порядка могут быть заданы рекурсивным соотношением:
-
 <img src = "https://render.githubusercontent.com/render/math?math=B_k%20(x)=%20(B_{k-1}%20*%20B_k)(x)">,  где оператор * обозначает свертку	
 
 Если k (x) используется для весовой функции N_{i,k}(u), аппроксимационная кривая B-сплайна будет:
-<img src = "">
 <img src = "https://render.githubusercontent.com/render/math?math=p(x)%20=%20\sum_{i=0}^{n}%20r_i%20B_k(x-i)">
-
 где r_i - бесконечная последовательность контрольных точек. Соответственно, для каждого значения k кусочно-кривой p_i(x) будет аппроксимировать контрольный многоугольник.
 
  ![](https://github.com/Duyen38/duyen/blob/master/paper/%D1%80%D0%B8%D1%811.png)
